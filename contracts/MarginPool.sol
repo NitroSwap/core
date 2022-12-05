@@ -3,7 +3,6 @@ pragma solidity ^0.8.17;
 
 import {ERC20} from "solmate/tokens/ERC20.sol";
 import {SafeTransferLib} from "solmate/utils/SafeTransferLib.sol";
-import {SafeCastLib} from "solmate/utils/SafeCastLib.sol";
 import {FixedPointMathLib} from "solmate/utils/FixedPointMathLib.sol";
 
 error InsufficientFundsError();
@@ -19,8 +18,6 @@ error InsufficientFundsError();
  * (eg. Uniswap V2, Curve V2).
  */
 contract MarginPool is ERC20 {
-    using SafeCastLib for *;
-
     /*//////////////////////////////////////////////////////////////
                                  EVENTS
     //////////////////////////////////////////////////////////////*/
